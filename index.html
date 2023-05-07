@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"
+    <meta http-equiv="X-IA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel With Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+          <nav>
+            <img src="Image/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#Trips">Trips</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+             <p>Let's Travel with us hassle free</p>
+              <h1>XYZ Company</h1>
+            </div>
+    </div>
+
+</div>
+<!---------------Trips-------------->
+<div id="Trips">
+    <div class="container">
+        <h1 class="sub-title">Trips</h1>
+        <div class="Services-list">
+            <div>
+                <a href="Image/kedarnath.pdf" class="donload">
+                <i class="fa fa-solid fa-person-hiking"></i>
+                <h4>Kedarnath Yatra</h4>
+                <h3>Season</h3>
+                <p>Summer</p>
+                <h3>Day-Night</h3>
+                <p>9D-8N</p>
+                <h3>Rate</h3>
+                <p>15000.00</p>
+            </a>
+            </div>
+            <div>
+                <a href="comming soon.html" class="donload">
+                    <i class="fa-solid fa-snowman"></i>
+                <h4>Manali & Kasol</h4>
+                <h3>Season</h3>
+                <p>Summer</p>
+                <h3>Day-Night</h3>
+                <p>8D-7N</p>
+                <h3>Rate</h3>
+                <p>8000.00</p>
+                </a>
+            </div>
+            <div>
+                <a href="comming soon.html" class="download">
+                <i class="fas fa-regular fa-water"></i>
+                <h4>Bhrigu Lake</h4>
+                <h3>Season</h3>
+                <p>Summer</p>
+                <h3>Day-Night</h3>
+                <p>9D-8N</p>
+                <h3>Rate</h3>
+                <p>9000.00</p>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------Gallery----------------------->
+<div id="gallery">
+    <div class="container">
+        <h1 class="sub-title">Gallery</h1>
+        <div class="Photos-list">
+            <div class="Photos">
+            <img src="Image/Kedarnath.jpg">
+            <div class="layer">
+                <h3>Kedarnath</h3>
+                <p>Click here to view</p>
+                <a href="#"><i class="fa fa-light fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+            <div class="Photos">
+                <img src="Image/Manali.jpg">
+                <div class="layer">
+                    <h3>Manali & Kasol</h3>
+                    <p>Click here to view</p>
+                    <a href="#"><i class="fa fa-light fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="Photos">
+                 <img src="Image/Bharigu.jpg">
+                 <div class="layer">
+                    <h3>Bhrigu Lake</h3>
+                    <p>Click here to view</p>
+                    <a href="#"><i class="fa fa-light fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!---------------------------------------------Contact-------------------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>swapana994877@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91 8897331903</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/kedar.nath_yatra?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>   
+                    <a href="https://wa.link/mv2w86"><i class="fa-brands fa-whatsapp"></i></a> 
+                    <a href=" mailto: swapana994877@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Ritesh. Made with <i class="fa-solid fa-heart"></i> by Ritesh</p>
+    </div>
+</div>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+    <script>
+     const scriptURL = 'https://script.google.com/macros/s/AKfycbzyAEDi2pGVI9Fl9j1HpUyh8RbxvO3NT0FCladXN5pTGK0qn4cETPJOsJ3o3WgKqVcL1Q/exec'
+     const form = document.forms['submit-to-google-sheet']
+     const msg = document.getElementById("msg")
+  
+     form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML= ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
